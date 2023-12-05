@@ -1,7 +1,7 @@
 import React from 'react'
 import './topicbox.css' 
 
-export default function TopicBox() {
+export default function TopicBox(props) {
   // const topic = "My favourite food is Kottu"
   // const item = "and fride rice"
 
@@ -15,11 +15,14 @@ export default function TopicBox() {
   return (
     <div>
       <div className='topicBox'>
-        {/* <span className='text'>{topic} {item}</span> */}
-        {/* <span className='text'>{c}</span> */}
-        {/* <span className='text'>{alert("Hello")}</span> */}
-        {/* <span className='text'>{foodprices}</span> meka waradi object return */}
-        <span className='text'>My favourite food is Kottu and fride rice</span>
+        {/* <span className='text'>My favourite food is Kottu</span> */}  {/* meka hard code krnna puluwn */}
+        {/* <span className='text'>{topic} {item}</span> */} {/* meka variable ekak hadala */}
+        {/* <span className='text'>{c}</span> */} {/* meka variable ekak hadala */}
+        {/* <span className='text'>{alert("Hello")}</span> */} {/* meka function ekak hadala */}
+        {/* <span className='text'>{true}</span> */} {/* meka waradi boolean value ekak hadala return krnn ba */}
+        {/* <span className='text'>{[1,2,3,4,5]}</span> */} {/* meka waradi array ekak hadala */}
+        {/* <span className='text'>{foodprices}</span>*/} {/* meka waradi object ekak hadala return krnn ba */}
+        <span className='text'>My favourite food is {props.food}</span> {/* meka props ekak hadala */}
       </div>
     </div>
   )

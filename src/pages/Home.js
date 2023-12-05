@@ -6,8 +6,9 @@ export default function Home() {
   return (
     <div>
         <h1>Home Page</h1>
-      <TopicBox/>
-      <Content/>
+      <TopicBox food = "Kottu"/>
+      <TopicBox food = "Rice"/>
+      <TopicBox food = "Hoppers"/>
     </div>
   )
 }
