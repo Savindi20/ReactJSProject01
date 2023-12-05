@@ -23,7 +23,8 @@ export default function TopicBox(props) {
         {/* <span className='text'>{[1,2,3,4,5]}</span> */} {/* meka waradi array ekak hadala */}
         {/* <span className='text'>{foodprices}</span>*/} {/* meka waradi object ekak hadala return krnn ba */}
         {/* <span className='text'>My favourite food is {props.food}</span>*/} {/*meka props ekak hadala */}
-        <span className='text'>My favourite food is {props.food} the Price is {props.price}</span> {/* meka props kihipayk hadala */}
+        {/* <span className='text'>My favourite food is {props.food} the Price is {props.price}</span>  */} {/* meka props kihipayk hadala */}
+        <span className='text'>My favourite food is {props.food} the Price is {props.price}</span> {props.children} {/* meka chidren props hadala */}
       </div>
     </div>
   )
