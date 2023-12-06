@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { useState } from 'react';
 // import { BrowserRouter as Router } from 'react-router-dom';
 // import { BrowserRouter as Route} from 'react-router-dom';
 // import { BrowserRouter as Switch} from 'react-router-dom';
@@ -9,14 +10,26 @@ import './App.css';
 // import Contact from './pages/Contact';
 
 function App() {
-  // let [count, setCount] = React.useState(0);
-  let count = 0;
+  const [count, setCount] = useState(0);
+
+  // let count = 0;
+  const increment = () => {
+    // count++;
+    setCount(count + 1);
+  }
+
+  const decrement = () => { 
+    // count--;
+    setCount(count - 1);
+  }
+
   return (
     <>
       <span className='title'>My Counter</span>
       <p className='subTitle'>The Count is {count}</p>
-      <button className='button'>+</button>
-      <button className='button'>-</button>
+      <button onClick={increment} className='button'>+</button>
+      <button onClick={decrement} className='button'>-</button>
+      
       {/* <button onClick={() => setCount(count + 1)}>Add</button>
       <button onClick={() => setCount(count - 1)}>Subtract</button> */}
     </>
