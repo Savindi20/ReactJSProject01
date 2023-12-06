@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Profile from './Profile';
+import About from './About';
 
 // import Accordion from 'react-bootstrap/Accordion';
 // import { useState } from 'react';
@@ -12,10 +16,10 @@ import './App.css';
 // import About from './pages/About';
 // import Contact from './pages/Contact';
 
-function buttonClick() {
-  console.log("Button Clicked");
-  alert("Button Clicked");
-}
+// function buttonClick() {
+//   console.log("Button Clicked");
+//   alert("Button Clicked");
+// }
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -33,12 +37,21 @@ function App() {
 
   return (
     <div>
-      <h1>React Event Handling</h1>
+      {/* <h1>React Router</h1> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' extac element={<Home/>} />
+          <Route path='/profile' extac element={<Profile/>} />
+          <Route path='/about' element={<About/>} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* <h1>React Event Handling</h1>
       <br /> <hr /> <br />
-      <button onClick={buttonClick}>Click Here</button>
+      <button onClick={buttonClick}>Click Here</button> */}
 
-
-      {/* <div className="acordin">
+      {/* <h1>React Bootstrap</h1>
+      <div className="acordin">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -65,26 +78,18 @@ function App() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-      </div> */}
+      </div>*/}
       
-      {/* <span className='title'>My Counter</span>
+      {/* <h1>React Variable value Handling</h1>
+      <span className='title'>My Counter</span>
       <p className='subTitle'>The Count is {count}</p>
       <button onClick={increment} className='button'>+</button>
-      <button onClick={decrement} className='button'>-</button> */}
+      <button onClick={decrement} className='button'>-</button> 
+      <button onClick={() => setCount(count + 1)}>Add</button>
+      <button onClick={() => setCount(count - 1)}>Subtract</button> 
+      use state ekk use krl asign krn value ekk  percistant, constant value ekk nemei */}
 
-      {/* <button onClick={() => setCount(count + 1)}>Add</button>
-      <button onClick={() => setCount(count - 1)}>Subtract</button> */}
-
-      {/* use state ekk use krl asign krn value ekk  percistant, constant value ekk nemei */}
-    </div>
-    
-    // <Router>
-    //   <Switch>
-    //     <Route path="/" exact component={Home} />
-    //     <Route path="/about" component={About} />
-    //     <Route path="/contact" component={Contact} />
-    //   </Switch>
-    // </Router>
+    </div> 
   );
 }
 
