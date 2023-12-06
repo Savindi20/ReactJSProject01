@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Accordion from 'react-bootstrap/Accordion';
+
+// import Accordion from 'react-bootstrap/Accordion';
 // import { useState } from 'react';
 
 // import { BrowserRouter as Router } from 'react-router-dom';
@@ -10,6 +11,11 @@ import Accordion from 'react-bootstrap/Accordion';
 // import Home from './pages/Home';
 // import About from './pages/About';
 // import Contact from './pages/Contact';
+
+function buttonClick() {
+  console.log("Button Clicked");
+  alert("Button Clicked");
+}
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -27,8 +33,12 @@ function App() {
 
   return (
     <div>
-      <h1>React bootstrap</h1>
-      <div className="acordin">
+      <h1>React Event Handling</h1>
+      <br /> <hr /> <br />
+      <button onClick={buttonClick}>Click Here</button>
+
+
+      {/* <div className="acordin">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -55,7 +65,7 @@ function App() {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-      </div>
+      </div> */}
       
       {/* <span className='title'>My Counter</span>
       <p className='subTitle'>The Count is {count}</p>
